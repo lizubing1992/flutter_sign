@@ -1,0 +1,46 @@
+group 'com.djcx.sign'
+version '1.0'
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+    }
+}
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 16
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+        disable 'InvalidPackage'
+    }
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation files('libs/wsecx_android_package_v1.4.jar')
+    implementation files('libs/AnySignMiniCoreV2.5.2.jar')
+    implementation files('libs/AnySignWriteBoardV2.5.2.jar')
+}

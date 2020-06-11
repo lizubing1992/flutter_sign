@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><step applic="NFE" uid="2_1"><?Pub Dtl?>
+<desc-cn><?Pub Dtl?>
+<p><?Pub Dtl?>飞机滑入前，确保停机位区域内无外来物（FOD）。</p>
+</desc-cn>
+<desc-en><?Pub Dtl?>
+<p><?Pub Dtl?>Ensure there is no FOD at aircraft parking area before
+the aircraft comesin.</p>
+</desc-en>
+</step>
